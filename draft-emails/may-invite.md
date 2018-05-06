@@ -23,7 +23,7 @@ Team Copper is happy to purchase your flights in advance using DCPPC money. To d
 Team Copper is happy to reimburse transportation expenses, hotels, Airbnbs, and everything allowed by the UC Davis. To get reimbursed, email Jason Queen (jqueen@ucdavis.edu) and cc Titus (titus@idyll.org). In the email, include your address (where the check will be sent) and whether or not you are a US Citizen.
 
 ## Childcare
-We know that primary caretakers of dependent children face inequitable hurdles when it comes to attending conferences. We will pay for you bring traveling companions for childcare. We will reimburse childcare expenses should you incur any. We are working on providing a list of all resources on site that will adress your needs. Feel free to contact Team Copper if you have specific questions or concerns. 
+We know that primary caretakers of dependent children face inequitable hurdles when it comes to attending conferences. We will pay for you bring a travel companion for childcare. We will reimburse childcare expenses should you incur any. We are working on providing a list of all resources on site that will adress your needs. Feel free to contact Team Copper if you have specific questions or concerns. 
 
 ## Code of Conduct
-All members of the Commons are expected to follow the [code of conduct](https://github.com/dcppc/dcppc-workshops/blob/master/CODE_OF_CONDUCT.md). We will enforce this code as needed. We expect cooperation from all members to help ensuring a safe environment for everybody. 
+All members of the Commons are expected to follow the [code of conduct](https://github.com/dcppc/dcppc-workshops/blob/master/CODE_OF_CONDUCT.md). We will enforce this code as needed. We expect cooperation from all members to help to ensure a safe environment for everybody. 
