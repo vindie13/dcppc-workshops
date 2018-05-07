@@ -7,13 +7,13 @@ The goals of the May workshop are to build community, to facilitate planned and 
 
 The event will run from 9am-5pm on both days.
 
-On **Wednesday, May 30**, activities will focus on communicating the awesome things we've done already. 
+On **Wednesday, May 30**, activities will focus on communicating the awesome things we're doing already!
 
 On **Thursday, May 31**, activities will support brainstorming and planning future work.
 
 Each afternoon of the event will feature breakout collaboration and discussion sessions suggested and organized by you, the attendees!
 
-Every person affiliated with the Data Commons is invited. Vivien Bonazzi will be there! 
+Every person affiliated with the Data Commons is invited. Dr. Vivien Bonazzi intends to come! 
 
 _We would love_ to have at least 3 people from each team and at least 2 people from each of the data stewards. Come join us on May 30-31, share all the great work your team is doing, and be inspired by others in the Commons!
 
