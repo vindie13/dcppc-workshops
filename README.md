@@ -1,9 +1,9 @@
 # dcppc-workshops
 Organizing the monthly DCPPC workshops.
 
-Click on the [Projects](https://github.com/dcppc/dcppc-workshops/projects){: .btn} 
+Click on the [Projects](https://github.com/dcppc/dcppc-workshops/projects) 
 button above to view the dashboards for each montly meeting. 
-Or, click the [Issues](https://github.com/dcppc/dcppc-workshops/issues){: .btn} 
+Or, click the [Issues](https://github.com/dcppc/dcppc-workshops/issues) 
 to view all the issues related to the workshops in list form. 
 
 All members of the Commons are expected to agree with the our 
