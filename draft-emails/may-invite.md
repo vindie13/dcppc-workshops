@@ -1,9 +1,9 @@
-We are excited to invite you to a workshop on **May 30-31 in Boston** in the
+We are excited to invite you to a DCPPC workshop on **May 30-31 in Boston** in the
 [Countway Library of Medicine](https://www.google.com/maps/place/Countway+Library+of+Medicine/@42.3351702,-71.1058309,17z/data=!3m1!4b1!4m5!3m4!1s0x89e3798eb633f88d:0xc932ca88d645da0b!8m2!3d42.3351663!4d-71.1036369)
 at the Harvard School of Public Health in Boston, MA.
 
 ## What to expect
-The goals of the May workshop are to build community, to facilitate planned and serendipitous collaboration across teams, and to surface hidden issues around technical and conceptual interoperability.
+The goals of the DCPPC May workshop are to build community, to facilitate planned and serendipitous collaboration across teams, and to surface hidden issues around technical and conceptual interoperability.
 
 The event will run from 9am-5pm on both days.
 
