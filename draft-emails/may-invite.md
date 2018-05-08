@@ -24,10 +24,15 @@ Please note that _registration is required to attend_.
 
 ## The Consortium is paying! 
 
-Team Copper is happy to reimburse transportation expenses, hotels, Airbnbs, and everything allowed by the UC Davis travel policy _(since we will be using UC Davis to reimburse expenses for this meeting.)_. Additional details will be provided upon registration. 
+Team Copper is happy to reimburse transportation expenses, hotels, Airbnbs, and everything allowed by the [UC Davis travel policy](http://afs.ucdavis.edu/our_services/travel-e-entertainment/policies/index.html) _(since we will be using UC Davis to reimburse expenses for this meeting.)_. Specific details for reimbursement will be provided upon registration. Save your receipts!
 
 ## Childcare
-We know that primary caretakers of dependent children face inequitable hurdles when it comes to attending conferences. We are working on providing a list of all resources on site that will adress your needs. Feel free to contact Team Copper if you have specific questions or concerns. 
+We know that primary caretakers of dependent children face inequitable hurdles when it comes to attending conferences. We are working on providing a list of all resources on site that will adress your needs. Feel free to contact [Team Copper](commons@dib-lab.groups.io) if you have specific questions or concerns. 
 
 ## Code of Conduct
-All members of the Commons are expected to follow the [code of conduct](https://github.com/dcppc/dcppc-workshops/blob/master/CODE_OF_CONDUCT.md). We will enforce this code as needed. We expect cooperation from all members to help to ensure a safe environment for everybody. 
+All members of the Commons are expected to follow the [code of conduct](https://github.com/dcppc/dcppc-workshops/blob/master/CODE_OF_CONDUCT.md). We will enforce this code as needed. We expect cooperation from all members to help to ensure a safe environment for everybody.
+
+Thanks!
+Rayna Harris and the rest of Team Copper
+
+
