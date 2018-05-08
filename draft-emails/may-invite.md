@@ -24,7 +24,7 @@ Please note that _registration is required to attend_.
 
 ## The Consortium is paying! 
 
-Team Copper is happy to reimburse transportation expenses, hotels, Airbnbs, and everything allowed by the UC Davis travel policy. Details will be provided upon registration. _(Note: if you choose to apply for reimbursement through a non-UC Davis channel, please follow the appropriate institutional travel policy.)_
+Team Copper is happy to reimburse transportation expenses, hotels, Airbnbs, and everything allowed by the UC Davis travel policy _(since we will be using UC Davis to reimburse expenses for this meeting.)_. Additional details will be provided upon registration. 
 
 ## Childcare
 We know that primary caretakers of dependent children face inequitable hurdles when it comes to attending conferences. We are working on providing a list of all resources on site that will adress your needs. Feel free to contact Team Copper if you have specific questions or concerns. 
