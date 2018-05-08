@@ -15,7 +15,7 @@ Each afternoon of the event will feature breakout collaboration and discussion s
 
 Every person affiliated with the Data Commons is invited. Dr. Vivien Bonazzi intends to come! 
 
-_We would love_ to have at least 3 people from each team and at least 2 people from each of the data stewards. Come join us on May 30-31, share all the great work your team is doing, and be inspired by others in the Commons!
+_We would love_ to have at least 3-5 people from each team and at least 2 people from each of the data stewards. Come join us on May 30-31, share all the great work your team is doing, and be inspired by others in the Commons!
 
 ## Registration
 Please visit this website to register: https://ti.to/dcppc/may-data-commons-workshop
