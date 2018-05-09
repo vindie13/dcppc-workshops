@@ -13,7 +13,7 @@ library(tidyverse)
 
 ```{r raw, message=FALSE, include=FALSE}
 ## Load raw data
-df <- read_csv("../data/tito-dcppc-may-data-commons-workshop-tickets-for-rayna-harris-gmail-com-1091243.csv")
+df <- read_csv("./data/tito-dcppc-may-data-commons-workshop-tickets-for-rayna-harris-gmail-com-1091243.csv")
 # names(df) # view header 
 ```
 
