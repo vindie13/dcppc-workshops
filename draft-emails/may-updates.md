@@ -6,12 +6,12 @@ Thanks for your enthusiastic response to the May meeting announcement! 25 people
 
 Here are some frequently asked questions and a link to answers:
 
-- **how do I get reimbursed?** here's a link to the reimbursement worksheet: https://github.com/dcppc/2018-may-workshop/tree/master/reimbursements
-- **what hotels do you recommend?** here's our top 4 and many others: https://github.com/dcppc/2018-may-workshop/blob/master/hotels.md  
-- **who's coming?** see the list here: https://github.com/dcppc/2018-may-workshop/blob/master/attendees.md
-- **what's the general format** Everyone together in the morning, breakout sessions in the afternoon. 
-- **can I suggest a session?** yes! please open an issue with your idea here: https://github.com/dcppc/2018-may-workshop/issues
-- **do you have travel tips for Boston?** not yet, but we will put something together
+- **How do I get reimbursed?** Here's a link to the reimbursement worksheet: https://github.com/dcppc/2018-may-workshop/tree/master/reimbursements
+- **What hotels do you recommend?** Here's our top 4 and many others: https://github.com/dcppc/2018-may-workshop/blob/master/hotels.md  
+- **Who's coming?** 25 have registered! See the list here: https://github.com/dcppc/2018-may-workshop/blob/master/attendees.md
+- **what's the general format?** Everyone together in the morning, breakout sessions in the afternoon. 
+- **Can I suggest a session?** Yes! Please open an issue with your idea here: https://github.com/dcppc/2018-may-workshop/issues
+- **Do you have travel tips for Boston?** Not yet, but we will put something together ASAP!
 
 All the links above are housed within a new GitHub repository called https://github.com/dcppc/2018-may-workshop/
 
