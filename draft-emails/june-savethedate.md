@@ -13,10 +13,11 @@ Lodging in the Sitka Block of Reed campus is available for attendees without chi
 Childcare is available! However, space is very limited and you are encouraged to book childcare right now. Childcare is not on-site, and you must also secure for off-campus housing.
 https://galaxyproject.org/events/gccbosc2018/childcare/
 
+Reimbursements will be issued for travel and lodging via UC Davis. More details at https://github.com/dcppc/2018-may-workshop/tree/master/reimbursements
 
-Reimbursements will be issued for travel and lodging. 
+Feel free to ask more question via email or on slack at https://nih-dcppc.slack.com/messages/CAMLGP27N/convo/C7ULH1XRT-1525894861.000398/?
 
 We hope to see you there!
 
-Team Copper!
+Rayna (and the rest of Team Copper!)
 
