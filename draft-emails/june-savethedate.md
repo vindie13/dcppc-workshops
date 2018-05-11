@@ -4,7 +4,7 @@ Hi colleagues,
 
 The June DCPPC meeting will take place on Friday-Saturday, June 29-30 in Portland, Oregon. 
 
-This meeting will be part of a larger 'CollaborationFest' taking place at Bioinformatics Open Source Conference 2018 (BOSC2018). Many Data Commons members will be at the meeting anyway. You are all encouraged and welcome to attend the BOSC training events and meeting, but your attendance at the main meeting is a prerequisites for participating in the Data Commons workshops. 
+This meeting will be part of a larger 'CollaborationFest' taking place at Bioinformatics Open Source Conference 2018 (BOSC2018). Many Data Commons members will be at the meeting anyway. You are all encouraged and welcome to attend the BOSC training events and meeting, but your attendance is not a prerequisite for participating in the Data Commons workshops. https://gccbosc2018.sched.com/
 
 CollaborationFest is free! You still need to register here: https://galaxyproject.org/events/gccbosc2018/register
 
