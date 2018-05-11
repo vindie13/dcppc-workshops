@@ -1,0 +1,57 @@
+---
+title: "May regstration as of May 9"
+author: "Rayna M Harris"
+date: "5/9/2018"
+output: md_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+
+```{r raw, message=FALSE, include=FALSE}
+## Load raw data
+df <- read_csv("./data/tito-dcppc-may-data-commons-workshop-tickets-for-rayna-harris-gmail-com-1091309.csv")
+
+# names(df) # view header 
+```
+
+```{r annonymize, include=FALSE}
+## keep these columns only
+df <- df[c(1,3,11,19,28:32)] # manually selected for importance
+# names(df) # confirm
+```
+
+How many incomplete registrants?
+
+```{r incomplete, echo=FALSE}
+length(df$`Which Team are you a member of?`[is.na(df$`Which Team are you a member of?`)])
+```
+
+
+
+```{r factorize, include=FALSE}
+##  Make factors
+cols <- c(2:9) # character columns to turn to factors
+df[cols] <- lapply(df[cols], factor) # set as factor
+# sapply(df, class) # confirm
+df <- na.omit(df) # drop nas
+```
+
+How many total registrants?
+
+```{r totalregistered, echo=FALSE}
+length(df$`Which Team are you a member of?`[(df$`Which Team are you a member of?`)])
+```
+
+Summary statistics for may meeting thus far
+```{r summarize}
+summary(df$`Do you agree to abide by the event Code of Conduct?`)
+summary(df$`Which Team are you a member of?`)
+summary(df$`Do you have any dietary restrictions?`)
+summary(df$`Do you agree to video recording?`)
+# maybe shown as `-`
+summary(df$`Do you need assistance with childcare (reimbursements, accomdations)?`)
+```
