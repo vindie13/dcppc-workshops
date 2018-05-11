@@ -11,7 +11,7 @@ Here are some frequently asked questions and a link to answers:
 - **What hotels do you recommend?** Here's our top 4 and many others: https://github.com/dcppc/2018-may-workshop/blob/master/hotels.md 
 - **Do you have travel tips for Boston?** Not yet, but we will put something together ASAP!
 - **Do I have to book flights through Aggie Travel?** No, you can book on your own and request reimbursement. 
-- **Is there a per diem?** Yes, $62 for meals for travel days. For non-travel days, save your receipts and claim up to $62 per day.
+- **Is there a per diem?** Only for international travel days. Save your receipts and claim up to $62 per day.
 - **Who's coming?** 25 have registered! See the list here: https://github.com/dcppc/2018-may-workshop/blob/master/attendees.md
 - **What's the general format?** Everyone together in the morning, breakout sessions in the afternoon. Attendees will help set the agenda via GitHub issues. https://github.com/dcppc/2018-may-workshop/issues
 - **Can I suggest a session?** Yes! Please open an issue with your idea here https://github.com/dcppc/2018-may-workshop/issues
