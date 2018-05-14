@@ -13,7 +13,7 @@ library(tidyverse)
 
 ```{r raw, message=FALSE, include=FALSE}
 ## Load raw data
-df <- read_csv("./data/tito-dcppc-may-data-commons-workshop-tickets-for-rayna-harris-gmail-com-1091859.csv")
+df <- read_csv("./data/tito-dcppc-may-data-commons-workshop-tickets-for-rayna-harris-gmail-com-1091862.csv")
 
 # names(df) # view header 
 ```
@@ -64,12 +64,13 @@ df$`Which Team are you a member of?` <- ifelse(grepl("Data Stewards", df$`Which 
                   ifelse(grepl("Helium", df$`Which Team are you a member of?`), "Helium",
                   ifelse(grepl("Phosphorus", df$`Which Team are you a member of?`), "Phosphorus", "Other"))))))))))))
 df$`Which Team are you a member of?` <- as.factor(as.character(df$`Which Team are you a member of?`))
+names(df)[7]<-"Team"
 ```
 
 Summary statistics for may meeting thus far
 ```{r summarize}
 summary(df$`Do you agree to abide by the event Code of Conduct?`) 
-summary(df$`Which Team are you a member of?`)
+summary(df$`Team`)
 summary(df$`Do you have any dietary restrictions?`)
 summary(df$`Do you agree to video recording?`)
 # maybe/unsure shown as `-`
@@ -78,8 +79,15 @@ summary(df$`Do you need assistance with childcare (reimbursements, accomdations)
 
 ```{r names}
 attendees <- df %>% 
-  select(`Ticket Full Name`, `Which Team are you a member of?`) %>%  
-  arrange(`Which Team are you a member of?`)
+  select(`Ticket Full Name`, `Team`) %>%  
+  arrange(`Team`)
 attendees <- as.data.frame(attendees)
 attendees
+
+attendees <- df %>% 
+  select(`Ticket Full Name`, `Team`) %>%  
+  arrange(`Ticket Full Name`)
+attendees <- as.data.frame(attendees)
+attendees
+write.csv(attendees, "./data/attendees.csv")
 ```
