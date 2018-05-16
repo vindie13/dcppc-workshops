@@ -1,10 +1,10 @@
 How many incomplete registrants?
 
-    ## [1] 4
+    ## [1] 3
 
 How many total registrants?
 
-    ## [1] 31
+    ## [1] 36
 
     #names(df)[7]<-"Team"
     df$`Which Team are you a member of?` <- ifelse(grepl("Data Stewards", df$`Which Team are you a member of?`), "Data Stewards",
@@ -20,6 +20,7 @@ How many total registrants?
                       ifelse(grepl("Helium", df$`Which Team are you a member of?`), "Helium",
                       ifelse(grepl("Phosphorus", df$`Which Team are you a member of?`), "Phosphorus", "Other"))))))))))))
     df$`Which Team are you a member of?` <- as.factor(as.character(df$`Which Team are you a member of?`))
+
     names(df)[7]<-"Team"
 
 Summary statistics for may meeting thus far
@@ -27,21 +28,23 @@ Summary statistics for may meeting thus far
     summary(df$`Do you agree to abide by the event Code of Conduct?`) 
 
     ## Yes 
-    ##  31
+    ##  36
 
     summary(df$`Team`)
 
-    ##        Carbon        Copper Data Stewards        Helium           NIH 
-    ##             4             4             6             3             2 
-    ##      Nitrogen         Other        Sodium         Xenon       Yttrium 
-    ##             4             3             2             2             1
+    ##       Calcium        Carbon        Copper Data Stewards        Helium 
+    ##             3             4             4             6             4 
+    ##           NIH      Nitrogen         Other        Sodium         Xenon 
+    ##             2             4             3             2             3 
+    ##       Yttrium 
+    ##             1
 
     summary(df$`Do you have any dietary restrictions?`)
 
     ##                          Gluten-free                    Gluten-free, Keto 
     ##                                    1                                    1 
     ##                              no pork                      No restrictions 
-    ##                                    1                                   24 
+    ##                                    1                                   29 
     ## No restrictions, Allergic to seafood                                Vegan 
     ##                                    1                                    2 
     ##                           Vegetarian 
@@ -50,13 +53,13 @@ Summary statistics for may meeting thus far
     summary(df$`Do you agree to video recording?`)
 
     ## Yes, I agree to the video release 
-    ##                                31
+    ##                                36
 
     # maybe/unsure shown as `-`
     summary(df$`Do you need assistance with childcare (reimbursements, accomdations)?`)
 
     ##    Length     Class      Mode 
-    ##        31 character character
+    ##        36 character character
 
     attendees <- df %>% 
       select(`Ticket Full Name`, `Team`) %>%  
@@ -65,37 +68,42 @@ Summary statistics for may meeting thus far
     attendees
 
     ##          Ticket Full Name          Team
-    ## 1        Gregoire Versmee        Carbon
-    ## 2           Laura VERSMEE        Carbon
-    ## 3           Paul Avillach        Carbon
-    ## 4           Jessica Lyons        Carbon
-    ## 5            Rayna Harris        Copper
-    ## 6            Brad Chapman        Copper
-    ## 7      Sarah Wait Zaranek        Copper
-    ## 8          Rebecca Calisi        Copper
-    ## 9          Kristin Ardlie Data Stewards
-    ## 10     Christopher Tabone Data Stewards
-    ## 11            Ben Heavner Data Stewards
-    ## 12               Josh Bis Data Stewards
-    ## 13           Jared Nedzel Data Stewards
-    ## 14         Jeffrey DePons Data Stewards
-    ## 15             Stan Ahalt        Helium
-    ## 16        Claris Castillo        Helium
-    ## 17            Jeremy Yang        Helium
-    ## 18 valentina di francesco           NIH
-    ## 19          Chip Schwartz           NIH
-    ## 20          Daniel Clarke      Nitrogen
-    ## 21            Avi Ma'ayan      Nitrogen
-    ## 22         Sherry Jenkins      Nitrogen
-    ## 23    Megan Wojciechowicz      Nitrogen
-    ## 24        Anupama Gururaj         Other
-    ## 25          Firat Tiryaki         Other
-    ## 26          Cole Davisson         Other
-    ## 27           Merce Crosas        Sodium
-    ## 28         Daniel S. Katz        Sodium
-    ## 29            Alison Leaf         Xenon
-    ## 30         Saiju Pyarajan         Xenon
-    ## 31      Kristen Cleveland       Yttrium
+    ## 1              Zac Flamig       Calcium
+    ## 2           Cricket Sloan       Calcium
+    ## 3             Walt Shands       Calcium
+    ## 4        Gregoire Versmee        Carbon
+    ## 5           Laura VERSMEE        Carbon
+    ## 6           Paul Avillach        Carbon
+    ## 7           Jessica Lyons        Carbon
+    ## 8            Rayna Harris        Copper
+    ## 9            Brad Chapman        Copper
+    ## 10     Sarah Wait Zaranek        Copper
+    ## 11         Rebecca Calisi        Copper
+    ## 12         Kristin Ardlie Data Stewards
+    ## 13     Christopher Tabone Data Stewards
+    ## 14            Ben Heavner Data Stewards
+    ## 15               Josh Bis Data Stewards
+    ## 16           Jared Nedzel Data Stewards
+    ## 17         Jeffrey DePons Data Stewards
+    ## 18             Stan Ahalt        Helium
+    ## 19        Claris Castillo        Helium
+    ## 20            Jeremy Yang        Helium
+    ## 21            Sarah Davis        Helium
+    ## 22 valentina di francesco           NIH
+    ## 23          Chip Schwartz           NIH
+    ## 24          Daniel Clarke      Nitrogen
+    ## 25            Avi Ma'ayan      Nitrogen
+    ## 26         Sherry Jenkins      Nitrogen
+    ## 27    Megan Wojciechowicz      Nitrogen
+    ## 28        Anupama Gururaj         Other
+    ## 29          Firat Tiryaki         Other
+    ## 30          Cole Davisson         Other
+    ## 31           Merce Crosas        Sodium
+    ## 32         Daniel S. Katz        Sodium
+    ## 33            Alison Leaf         Xenon
+    ## 34         Saiju Pyarajan         Xenon
+    ## 35        Ross Rounsevell         Xenon
+    ## 36      Kristen Cleveland       Yttrium
 
     attendees <- df %>% 
       select(`Ticket Full Name`, `Team`) %>%  
@@ -113,27 +121,30 @@ Summary statistics for may meeting thus far
     ## 7      Christopher Tabone Data Stewards
     ## 8         Claris Castillo        Helium
     ## 9           Cole Davisson         Other
-    ## 10          Daniel Clarke      Nitrogen
-    ## 11         Daniel S. Katz        Sodium
-    ## 12          Firat Tiryaki         Other
-    ## 13       Gregoire Versmee        Carbon
-    ## 14           Jared Nedzel Data Stewards
-    ## 15         Jeffrey DePons Data Stewards
-    ## 16            Jeremy Yang        Helium
-    ## 17          Jessica Lyons        Carbon
-    ## 18               Josh Bis Data Stewards
-    ## 19      Kristen Cleveland       Yttrium
-    ## 20         Kristin Ardlie Data Stewards
-    ## 21          Laura VERSMEE        Carbon
-    ## 22    Megan Wojciechowicz      Nitrogen
-    ## 23           Merce Crosas        Sodium
-    ## 24          Paul Avillach        Carbon
-    ## 25           Rayna Harris        Copper
-    ## 26         Rebecca Calisi        Copper
-    ## 27         Saiju Pyarajan         Xenon
-    ## 28     Sarah Wait Zaranek        Copper
-    ## 29         Sherry Jenkins      Nitrogen
-    ## 30             Stan Ahalt        Helium
-    ## 31 valentina di francesco           NIH
-
-    write.csv(attendees, "./data/attendees.csv")
+    ## 10          Cricket Sloan       Calcium
+    ## 11          Daniel Clarke      Nitrogen
+    ## 12         Daniel S. Katz        Sodium
+    ## 13          Firat Tiryaki         Other
+    ## 14       Gregoire Versmee        Carbon
+    ## 15           Jared Nedzel Data Stewards
+    ## 16         Jeffrey DePons Data Stewards
+    ## 17            Jeremy Yang        Helium
+    ## 18          Jessica Lyons        Carbon
+    ## 19               Josh Bis Data Stewards
+    ## 20      Kristen Cleveland       Yttrium
+    ## 21         Kristin Ardlie Data Stewards
+    ## 22          Laura VERSMEE        Carbon
+    ## 23    Megan Wojciechowicz      Nitrogen
+    ## 24           Merce Crosas        Sodium
+    ## 25          Paul Avillach        Carbon
+    ## 26           Rayna Harris        Copper
+    ## 27         Rebecca Calisi        Copper
+    ## 28        Ross Rounsevell         Xenon
+    ## 29         Saiju Pyarajan         Xenon
+    ## 30            Sarah Davis        Helium
+    ## 31     Sarah Wait Zaranek        Copper
+    ## 32         Sherry Jenkins      Nitrogen
+    ## 33             Stan Ahalt        Helium
+    ## 34 valentina di francesco           NIH
+    ## 35            Walt Shands       Calcium
+    ## 36             Zac Flamig       Calcium

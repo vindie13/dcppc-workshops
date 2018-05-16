@@ -13,7 +13,7 @@ library(tidyverse)
 
 ```{r raw, message=FALSE, include=FALSE}
 ## Load raw data
-df <- read_csv("./data/tito-dcppc-may-data-commons-workshop-tickets-for-rayna-harris-gmail-com-1091862.csv")
+df <- read_csv("./data/tito-dcppc-may-data-commons-workshop-tickets-for-rayna-harris-gmail-com-1092104.csv")
 
 # names(df) # view header 
 ```
@@ -64,7 +64,9 @@ df$`Which Team are you a member of?` <- ifelse(grepl("Data Stewards", df$`Which 
                   ifelse(grepl("Helium", df$`Which Team are you a member of?`), "Helium",
                   ifelse(grepl("Phosphorus", df$`Which Team are you a member of?`), "Phosphorus", "Other"))))))))))))
 df$`Which Team are you a member of?` <- as.factor(as.character(df$`Which Team are you a member of?`))
+
 names(df)[7]<-"Team"
+
 ```
 
 Summary statistics for may meeting thus far
@@ -90,4 +92,18 @@ attendees <- df %>%
 attendees <- as.data.frame(attendees)
 attendees
 write.csv(attendees, "./data/attendees.csv")
+```
+
+```{r childcare}
+names(df)[10]<-"Childcare"
+attendees <- df %>% 
+  select(`Ticket Full Name`, `Childcare`) %>%  
+  filter(Childcare != "no")
+attendees <- as.data.frame(attendees)
+attendees
+```
+
+```{r}
+#This is the percent of females registered
+15/36
 ```
