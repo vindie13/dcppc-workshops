@@ -13,11 +13,12 @@ from all members to help ensuring a safe environment for everybody.
 
 ## Workshops in the works 
 
-| Where | When | Planned in concert with | 
-| --- | --- | --- |
-| Boston |May 30 - 31 
-| Portland |June 29 - 30 | associated wih BOSC |
-| UNC | end of July | help from Stan |
-| Chicago | end of August | help from Ian Foster |
-| Boston | end of Sept ? | help from KC2? |
-| NIH | October 16  | organized by NIH | 
+| Where | When | Planned in concert with | Website | 
+| --- | --- | --- | --- |
+| Boston |May 30 - 31 | Harvard | [website](http://nih-data-commons.us/2018-may-workshop/)| 
+| Portland |June 29 - 30 | associated wih BOSC | [website](https://galaxyproject.org/events/gccbosc2018/collaboration/) |
+| UNC | end of July | help from Stan | |
+| Chicago | end of August | help from Ian Foster | |
+| Boston | end of Sept ? | help from KC2? | |
+| NIH | October 16  | organized by NIH |  |
+ 
