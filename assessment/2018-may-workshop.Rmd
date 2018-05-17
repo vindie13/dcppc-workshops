@@ -143,7 +143,7 @@ names(df2)[4]<-"email"
 df3 <- left_join(df1, df2, by = "email")
 df3 <- df3[c(3,7,19)]  # keep only
 names(df3)[3] <- "GitHub"
-df3
+#df3
 
 ```
 
