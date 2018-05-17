@@ -2,7 +2,7 @@
 title: "May regstration as of May 9"
 author: "Rayna M Harris"
 date: "5/9/2018"
-output: html_document
+output: md_document
 ---
 
 ```{r setup, include=FALSE}
