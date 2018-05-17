@@ -2,7 +2,7 @@
 title: "May regstration as of May 9"
 author: "Rayna M Harris"
 date: "5/9/2018"
-output: md_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -13,15 +13,15 @@ library(tidyverse)
 
 ```{r raw, message=FALSE, include=FALSE}
 ## Load raw data
-df <- read_csv("./data/tito-dcppc-may-data-commons-workshop-tickets-for-rayna-harris-gmail-com-1092104.csv")
+df <- read_csv("~/Downloads/tito-dcppc-may-data-commons-workshop-tickets-for-rayna-harris-gmail-com-1092292.csv")
 
 # names(df) # view header 
 ```
 
 ```{r annonymize, include=FALSE}
-## keep these columns only
-df <- df[c(1,3,5,11,19,28:32)] # manually selected for importance
-df <- df[-c(1),] # drop test registramt
+df <- df[-c(24,31),] # drop duplicate registramt
+df <- df[c(1,3,5,11,19,28:32,8)] # manually selected for importance
+
 # names(df) # confirm
 ```
 
@@ -49,8 +49,7 @@ length(df$`Which Team are you a member of?`[(df$`Which Team are you a member of?
 ```
 
 
-```{r teamnames}
-#names(df)[7]<-"Team"
+```{r teamnames, echo = F}
 df$`Which Team are you a member of?` <- ifelse(grepl("Data Stewards", df$`Which Team are you a member of?`), "Data Stewards",
                   ifelse(grepl("NIH", df$`Which Team are you a member of?`), "NIH",
                   ifelse(grepl("Carbon", df$`Which Team are you a member of?`), "Carbon",
@@ -62,9 +61,9 @@ df$`Which Team are you a member of?` <- ifelse(grepl("Data Stewards", df$`Which 
                   ifelse(grepl("Argon", df$`Which Team are you a member of?`), "Argon",
                   ifelse(grepl("Calcium", df$`Which Team are you a member of?`), "Calcium",
                   ifelse(grepl("Helium", df$`Which Team are you a member of?`), "Helium",
-                  ifelse(grepl("Phosphorus", df$`Which Team are you a member of?`), "Phosphorus", "Other"))))))))))))
+                  ifelse(grepl("Oxygen", df$`Which Team are you a member of?`), "Oxygen",
+                  ifelse(grepl("Phosphorus", df$`Which Team are you a member of?`), "Phosphorus", "Other")))))))))))))
 df$`Which Team are you a member of?` <- as.factor(as.character(df$`Which Team are you a member of?`))
-
 names(df)[7]<-"Team"
 
 ```
@@ -79,31 +78,72 @@ summary(df$`Do you agree to video recording?`)
 summary(df$`Do you need assistance with childcare (reimbursements, accomdations)?`)
 ```
 
-```{r names}
-attendees <- df %>% 
-  select(`Ticket Full Name`, `Team`) %>%  
-  arrange(`Team`)
-attendees <- as.data.frame(attendees)
-attendees
-
+```{r names, echo = F}
 attendees <- df %>% 
   select(`Ticket Full Name`, `Team`) %>%  
   arrange(`Ticket Full Name`)
 attendees <- as.data.frame(attendees)
-attendees
+#attendees
 write.csv(attendees, "./data/attendees.csv")
 ```
 
-```{r childcare}
+```{r childcare, echo = F}
 names(df)[10]<-"Childcare"
-attendees <- df %>% 
+childcare <- df %>% 
   select(`Ticket Full Name`, `Childcare`) %>%  
   filter(Childcare != "no")
-attendees <- as.data.frame(attendees)
-attendees
+childcare <- as.data.frame(childcare)
+#childcare
 ```
 
-```{r}
+```{r females, include = F}
 #This is the percent of females registered
 15/36
 ```
+
+
+```{r table, include = F}
+df <- as.data.frame(df)
+
+## table of registrats
+df$`Which Team are you a member of?` <- NULL
+summary <- df %>%
+  group_by(Team) %>%
+  summarize (n = n())
+summary <- as.data.frame(summary)
+
+# print attendes by group
+for (element in c(levels(factor(df$Team)))) {
+  
+  print(paste("TEAM", element))
+  
+  names <- attendees %>% 
+  filter(Team %in% c(element))  %>% 
+  select(`Ticket Full Name`) %>% 
+  arrange(`Ticket Full Name`) %>% 
+  droplevels()
+  names <- as.data.frame(names[1])
+  #avector <- as.vector(aframe['a2'])
+  print(names)
+  
+}
+```
+
+Reconciling the may registrants, the Google onboarding form, and their Github handles. 
+Of 47 registratns, 24 emails matched the Google 
+sheet, and 22 of those have GitHub accounts.
+
+```{r googlesheet, echo = F, message = F, warning =F}
+# attendees in the google form with a github account
+df1 <- df
+df2 <- read.csv("~/Downloads/DCPPC all people Consortium responses to form - Form responses 1.csv")
+names(df1)[11]<-"email"
+names(df2)[4]<-"email" 
+
+df3 <- inner_join(df1, df2, by = "email")
+df3 <- df3[c(3,7,19)]  # keep only
+names(df3)[3] <- "GitHub"
+df3
+
+```
+
