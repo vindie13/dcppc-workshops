@@ -7,7 +7,10 @@ All members of the Commons are expected to follow the [code of conduct][CoC].
 before the event in order to ensure the safety of their participants, 
 and ensure that participants feel comfortable reporting any Code of Conduct incidents.
 In the event of a violation of the code of conduct,
-[this template][template] is a useful resource for documenting the incident and incident response.
+[this is a template][template] is a useful (but optional) resource for documenting the incident and incident response, 
+but any type of incident report is welcome.
+
+Maybe add a statement saying that while it's useful, any type of report is A-OK? We don't want people to avoid reporting because they think there's some procedural hurdle.
 
 [CoC]: https://github.com/dcppc/dcppc-workshops/blob/master/CODE_OF_CONDUCT.md
 [safer]: https://gitlab.com/otter-tech/coc-incident-response-workshop/blob/master/safer-events-pre-work.pdf
