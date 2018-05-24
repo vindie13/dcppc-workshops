@@ -1,5 +1,6 @@
 # dcppc-workshops
-Organizing the monthly DCPPC workshops.
+
+A _public_ repository for organizing the monthly DCPPC workshops.
 
 Click on the [Projects](https://github.com/dcppc/dcppc-workshops/projects) 
 button above to view the dashboards for each montly meeting. 
@@ -21,4 +22,3 @@ from all members to help ensuring a safe environment for everybody.
 | Chicago | end of August | help from Ian Foster | |
 | Boston | end of Sept ? | help from KC2? | |
 | NIH | October 16  | organized by NIH |  |
- 
