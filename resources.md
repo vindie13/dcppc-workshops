@@ -10,8 +10,6 @@ In the event of a violation of the code of conduct,
 [this is a template][template] is a useful (but optional) resource for documenting the incident and incident response, 
 but any type of incident report is welcome.
 
-Maybe add a statement saying that while it's useful, any type of report is A-OK? We don't want people to avoid reporting because they think there's some procedural hurdle.
-
 [CoC]: https://github.com/dcppc/dcppc-workshops/blob/master/CODE_OF_CONDUCT.md
 [safer]: https://gitlab.com/otter-tech/coc-incident-response-workshop/blob/master/safer-events-pre-work.pdf
 [template]: https://gitlab.com/otter-tech/coc-incident-response-workshop/blob/master/report-template-for-responders.pdf
