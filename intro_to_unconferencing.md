@@ -1,5 +1,7 @@
 # An Introduction to Unconferencing
 
+This document is a work-in-progress. Right now it's just an outline to get things going. We'll be fleshing it out and adding examples as time & resources allow.
+
 **Table of Contents**
 
 * [Introduction](#introduction)
