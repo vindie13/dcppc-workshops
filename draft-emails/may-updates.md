@@ -55,3 +55,23 @@ _If_ you would like try and memorize some DCPPC terms, associations and affiliat
 
 Thanks,
 Rayna (and the rest of Team Copper)
+
+## May 28 Updates
+
+Hello colleagues,
+
+I hope everyone is looking forward to the May DCPPC workshop! Here are some updates:
+
+**Agenda:** The updated agenda (with room numbers and a little more info about the Team talks) is here: <http://nih-data-commons.us/2018-may-workshop/agenda>.
+
+**Directions:** The Countway Library address is: 10 Shattuck Street, Boston, MA 02115.
+
+**When you arrive at Countway:** Please bring a photo id. Present your photo id to the security guard who will have a list of all attendees. Then, proceed to the Lahey Room (#518) to pick up your visitor pass and a name tag.
+
+**Food:** We will provide 2 coffee/snack breaks (at ~10:30 and 2:30, with pastries, fruit, and nuts) and box lunches (sandwiches or salads). Breakfast is on your own. Stay tuned for group dinner recommendations/reservations or feel free to eat dinner on your own.
+
+**Twitter:** Please use the hashtag [#CommonsPilot](https://twitter.com/search?src=typd&q=%23commonspilot) or tag us at [@nih_dcppc](https://twitter.com/nih_dcppc)
+
+**Slack:** We have a Slack team set up at [nih-dcppc.slack.com](https://nih-dcppc.slack.com/). Go [here for an invitation link](https://join.slack.com/t/nih-dcppc/shared_invite/enQtMjczNzQyODEwNDgxLWM0MWYzYzFkZDJiMDdiOTE4MjVhZjUxYzE4OWQ3NjdiNDFlOWY1MzVhMTdiMjZiODBlOWMxYTJiZDZmZWM4Mjc). You can use the [#2018-may-workshop](https://nih-dcppc.slack.com/messages/CALKWLP29/convo/GANQFSGAD-1527526385.000095/?) channel for chatter, links and questions.
+
+Safe travels!
