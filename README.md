@@ -16,9 +16,9 @@ from all members to help ensuring a safe environment for everybody.
 
 | Where | When | Planned in concert with | Website | 
 | --- | --- | --- | --- |
-| Boston |May 30 - 31 | Harvard | [website](http://nih-data-commons.us/2018-may-workshop/)| 
-| Portland |June 29 - 30 | associated wih BOSC | [website](https://galaxyproject.org/events/gccbosc2018/collaboration/) |
-| UNC | end of July | help from Stan | |
-| Chicago | end of August | help from Ian Foster | |
-| Boston | end of Sept ? | help from KC2? | |
+| Boston, MA |May 30 - 31 | Harvard | [website](http://nih-data-commons.us/2018-may-workshop/)| 
+| Portland, OR |June 29 - 30 | BOSC | [website](https://galaxyproject.org/events/gccbosc2018/collaboration/) |
+| Chapel Hill, NC | July 25-26 | RENCI | [website](http://nih-data-commons.us/2018-june-workshop/) |
+| Chicago, IL | end of August | help from Ian Foster | |
+| Boston, MA | end of Sept ? | help from KC2? | |
 | NIH | October 16  | organized by NIH |  |
