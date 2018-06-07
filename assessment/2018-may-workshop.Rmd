@@ -1,8 +1,8 @@
 ---
-title: "May regstration as of May 9"
+title: "May regstration as of May 26"
 author: "Rayna M Harris"
-date: "5/9/2018"
-output: md_document
+date: "5/26/2018"
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -11,46 +11,22 @@ library(tidyverse)
 ```
 
 
-```{r raw, message=FALSE, include=FALSE}
+```{r raw, message=FALSE, include=T, echo = F}
 ## Load raw data
-df <- read_csv("./data/tito-dcppc-may-data-commons-workshop-tickets-for-rayna-harris-gmail-com-1092104.csv")
-
-# names(df) # view header 
+df <- read_csv("~/Downloads/tito-dcppc-may-data-commons-workshop-tickets-for-rayna-harris-gmail-com-1093605.csv")
+df <- df[-c(5,23,29),] # drop incomplete registrants
+df <- df[c(1,3,5,11,19,28:32,8,9,6,7)] # manually selected for importance
 ```
-
-```{r annonymize, include=FALSE}
-## keep these columns only
-df <- df[c(1,3,5,11,19,28:32)] # manually selected for importance
-df <- df[-c(1),] # drop test registramt
-# names(df) # confirm
-```
-
-How many incomplete registrants?
-
-```{r incomplete, echo=FALSE}
-length(df$`Which Team are you a member of?`[is.na(df$`Which Team are you a member of?`)])
-```
-
 
 
 ```{r factorize, include=FALSE}
 ##  Make factors
-cols <- c(2:9) # character columns to turn to factors
+cols <- c(2:14) # character columns to turn to factors
 df[cols] <- lapply(df[cols], factor) # set as factor
-# sapply(df, class) # confirm
-df <- na.omit(df) # drop nas
-
-```
-
-How many total registrants?
-
-```{r totalregistered, echo=FALSE}
-length(df$`Which Team are you a member of?`[(df$`Which Team are you a member of?`)])
 ```
 
 
-```{r teamnames}
-#names(df)[7]<-"Team"
+```{r teamnames, echo = F}
 df$`Which Team are you a member of?` <- ifelse(grepl("Data Stewards", df$`Which Team are you a member of?`), "Data Stewards",
                   ifelse(grepl("NIH", df$`Which Team are you a member of?`), "NIH",
                   ifelse(grepl("Carbon", df$`Which Team are you a member of?`), "Carbon",
@@ -62,48 +38,117 @@ df$`Which Team are you a member of?` <- ifelse(grepl("Data Stewards", df$`Which 
                   ifelse(grepl("Argon", df$`Which Team are you a member of?`), "Argon",
                   ifelse(grepl("Calcium", df$`Which Team are you a member of?`), "Calcium",
                   ifelse(grepl("Helium", df$`Which Team are you a member of?`), "Helium",
-                  ifelse(grepl("Phosphorus", df$`Which Team are you a member of?`), "Phosphorus", "Other"))))))))))))
+                  ifelse(grepl("Oxygen", df$`Which Team are you a member of?`), "Oxygen",
+                  ifelse(grepl("Phosphorus", df$`Which Team are you a member of?`), "Phosphorus", "Other")))))))))))))
 df$`Which Team are you a member of?` <- as.factor(as.character(df$`Which Team are you a member of?`))
-
 names(df)[7]<-"Team"
 
 ```
 
-Summary statistics for may meeting thus far
-```{r summarize}
-summary(df$`Do you agree to abide by the event Code of Conduct?`) 
-summary(df$`Team`)
-summary(df$`Do you have any dietary restrictions?`)
-summary(df$`Do you agree to video recording?`)
-# maybe/unsure shown as `-`
-summary(df$`Do you need assistance with childcare (reimbursements, accomdations)?`)
-```
 
-```{r names}
+```{r attendees, echo = F}
+# List of attendees sorted by first name
 attendees <- df %>% 
-  select(`Ticket Full Name`, `Team`) %>%  
-  arrange(`Team`)
+  select(`Ticket Full Name`, `Team`, `Ticket Company Name`) 
 attendees <- as.data.frame(attendees)
-attendees
 
-attendees <- df %>% 
-  select(`Ticket Full Name`, `Team`) %>%  
+attendees$`Ticket Full Name` <- as.character(attendees$`Ticket Full Name`)
+
+attendees[nrow(attendees)+1,] <- c("Vivien Bonazzi", "NIH", "NIH")
+attendees[nrow(attendees)+1,] <- c("Victor Felix", "Phosphorus", "University of Maryland")
+
+attendees <- attendees %>%  
   arrange(`Ticket Full Name`)
-attendees <- as.data.frame(attendees)
+
 attendees
+
 write.csv(attendees, "./data/attendees.csv")
 ```
 
-```{r childcare}
-names(df)[10]<-"Childcare"
-attendees <- df %>% 
-  select(`Ticket Full Name`, `Childcare`) %>%  
-  filter(Childcare != "no")
-attendees <- as.data.frame(attendees)
-attendees
+
+
+```{r visitorpasses, echo = F}
+# List of attendees for visitor passes
+visitorpasses <- df %>% 
+  select(`Ticket First Name`, `Ticket Last Name`, `Ticket Company Name`, `Ticket Full Name`, `Team`) 
+visitorpasses <- as.data.frame(visitorpasses)
+
+visitorpasses$`Ticket Full Name` <- as.character(visitorpasses$`Ticket Full Name`)
+visitorpasses$`Ticket First Name` <- as.character(visitorpasses$`Ticket First Name`)
+visitorpasses$`Ticket Last Name` <- as.character(visitorpasses$`Ticket Last Name`)
+
+visitorpasses[nrow(visitorpasses)+1,] <- c("Vivien", "Bonazzi" , "NIH", "Vivien Bonazzi", "NIH")
+visitorpasses[nrow(visitorpasses)+1,] <- c("Victor", "Felix",  "University of Maryland", "Victor Felix", "Phosphorus")
+
+# sort by last name
+visitorpasses <- visitorpasses %>% 
+  arrange(`Ticket Last Name`)
+#visitorpasses
+
+write.csv(visitorpasses, "./data/visitorpasses.csv")
 ```
 
-```{r}
-#This is the percent of females registered
-15/36
+
+```{r table, include = T}
+summary <- attendees %>%
+  group_by(Team) %>%
+  summarize (n = n())
+summary <- as.data.frame(summary)
+summary
 ```
+
+
+Summary statistics for may meeting thus far
+```{r summarize}
+summary(df$`Do you agree to abide by the event Code of Conduct?`) 
+summary(df$`Do you have any dietary restrictions?`)
+summary(df$`Do you agree to video recording?`)
+# no response shown as `-`
+summary(df$`Do you need assistance with childcare (reimbursements, accomdations)?`)
+```
+
+```{r childcare, echo = F}
+names(df)[10]<-"Childcare"
+childcare <- df %>% 
+  select(`Ticket Full Name`, `Childcare`) %>%  
+  filter(Childcare != "no")
+childcare <- as.data.frame(childcare)
+#childcare
+```
+
+
+```{r bygroup, include = F}
+# print attendes by group
+for (element in c(levels(factor(df$Team)))) {
+  
+  print(paste("TEAM", element))
+  
+  names <- attendees %>% 
+  filter(Team %in% c(element))  %>% 
+  select(`Ticket Full Name`) %>% 
+  arrange(`Ticket Full Name`) %>% 
+  droplevels()
+  names <- as.data.frame(names[1])
+  #avector <- as.vector(aframe['a2'])
+  print(names)
+  
+}
+```
+
+Reconciling the may registrants, the Google onboarding form, and their Github handles. 
+Of 53 registratns, 24 emails matched the Google 
+sheet, and 21 of those have GitHub accounts.
+
+```{r googlesheet, echo = F, message = F, warning =F}
+# attendees in the google form with a github account
+df1 <- as.data.frame(df)
+df2 <- read.csv("~/Downloads/DCPPC all people Consortium responses to form - Form responses 1.csv")
+names(df1)[11]<-"email"
+names(df2)[4]<-"email" 
+
+df3 <- left_join(df1, df2, by = "email")
+df3 <- df3[c(3,7,22)]  # keep only
+names(df3)[3] <- "GitHub"
+#df3
+```
+
