@@ -11,11 +11,10 @@ Questions include:
 - Do you need assistance with childcare?
 
 Workflow
-1. The data in this repository is exported as a csv from titos. 
-2. The data is read into R.
+1. The data in this repository is downlaoded as a csv from titos 
+2. The data is read into R. The data is not included here because it contains private information.
 3. Columns with personal information are dropped
 4. Data is analyzed with and .Rmd file 
 5. A .md file is created
-6. The raw data file is deleted. 
-7. The .Rmd and .md file are pushed to a GitHub fork. 
-8. A pull is requested and merged. 
+6. The raw data and clean data csv files are ignored in the .gitignore file
+7. The .Rmd and .md file are committed to GitHub

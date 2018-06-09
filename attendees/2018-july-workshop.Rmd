@@ -1,0 +1,105 @@
+---
+title: "July workshop regstration analysis"
+author: "Rayna M Harris"
+date: "6/09/2018"
+output: md_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+
+```{r raw, message=FALSE, include=T, echo = F}
+## Load raw data
+df <- read_csv("~/Downloads/tito-dcppc-2018-july-workshop-tickets-for-rayna-harris-gmail-com-1095276.csv")
+df <- df[-c(3:5),] # drop incomplete registrants
+df <- df[c(5:8,28:34)] # manually selected for importance
+```
+
+
+```{r teamnames, echo = F}
+df$`Which Team are you a member of?` <- ifelse(grepl("Data Stewards", df$`Which Team are you a member of?`), "Data Stewards",
+                  ifelse(grepl("NIH", df$`Which Team are you a member of?`), "NIH",
+                  ifelse(grepl("Carbon", df$`Which Team are you a member of?`), "Carbon",
+                  ifelse(grepl("Copper", df$`Which Team are you a member of?`), "Copper",
+                  ifelse(grepl("Nitrogen", df$`Which Team are you a member of?`), "Nitrogen",
+                  ifelse(grepl("Sodium", df$`Which Team are you a member of?`), "Sodium",
+                  ifelse(grepl("Xenon", df$`Which Team are you a member of?`), "Xenon",
+                  ifelse(grepl("Yttrium", df$`Which Team are you a member of?`), "Yttrium", 
+                  ifelse(grepl("Argon", df$`Which Team are you a member of?`), "Argon",
+                  ifelse(grepl("Calcium", df$`Which Team are you a member of?`), "Calcium",
+                  ifelse(grepl("Helium", df$`Which Team are you a member of?`), "Helium",
+                  ifelse(grepl("Oxygen", df$`Which Team are you a member of?`), "Oxygen",
+                  ifelse(grepl("Phosphorus", df$`Which Team are you a member of?`), "Phosphorus", "Other")))))))))))))
+df$`Which Team are you a member of?` <- as.factor(as.character(df$`Which Team are you a member of?`))
+names(df)[5]<-"Team"
+
+```
+
+
+```{r attendees, echo = F}
+# List of attendees sorted by first name
+attendees <- df %>% 
+  select(`Ticket Full Name`, `Team`) 
+attendees <- as.data.frame(attendees)
+
+attendees$`Ticket Full Name` <- as.character(attendees$`Ticket Full Name`)
+
+attendees <- attendees %>%  
+  arrange(`Ticket Full Name`)
+
+#attendees
+
+write.csv(attendees, "./data/2018-july-attendees.csv")
+```
+
+
+```{r table, include = T}
+summary <- attendees %>%
+  group_by(Team) %>%
+  summarize (n = n())
+summary <- as.data.frame(summary)
+summary
+```
+
+Summary statistics for may meeting thus far
+```{r summarize}
+##  Make factors
+cols <- c(6:11) # character columns to turn to factors
+df[cols] <- lapply(df[cols], factor) # set as factor
+summary(df$`Do you agree to abide by the event Code of Conduct?`) 
+summary(df$`Do you have any dietary restrictions?`)
+summary(df$`Do you agree to video recording?`)
+summary(df$`Do you need assistance with childcare (reimbursements, accomdations)?`)
+summary(df$`Are you interested in attending a group dinner on Wed. July 25?`)
+```
+
+```{r childcare, echo = F}
+names(df)[7]<-"Childcare"
+childcare <- df %>% 
+  select(`Ticket Full Name`, `Childcare`) %>%  
+  filter(Childcare == "yes")
+childcare <- as.data.frame(childcare)
+#childcare
+```
+
+
+```{r bygroup, include = F}
+# print attendes by group
+for (element in c(levels(factor(df$Team)))) {
+  
+  print(paste("TEAM", element))
+  
+  names <- attendees %>% 
+  filter(Team %in% c(element))  %>% 
+  select(`Ticket Full Name`) %>% 
+  arrange(`Ticket Full Name`) %>% 
+  droplevels()
+  names <- as.data.frame(names[1])
+  #avector <- as.vector(aframe['a2'])
+  print(names)
+  
+}
+```
