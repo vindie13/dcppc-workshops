@@ -2,18 +2,7 @@
       group_by(Team) %>%
       summarize (n = n())
     summary <- as.data.frame(summary)
-    summary
-
-    ##            Team n
-    ## 1       Calcium 2
-    ## 2        Carbon 1
-    ## 3        Copper 3
-    ## 4 Data Stewards 3
-    ## 5        Helium 2
-    ## 6        Oxygen 1
-    ## 7        Sodium 1
-    ## 8         Xenon 2
-    ## 9       Yttrium 1
+    #summary
 
 Summary statistics for may meeting thus far
 
@@ -23,37 +12,41 @@ Summary statistics for may meeting thus far
     summary(df$`Do you agree to abide by the event Code of Conduct?`) 
 
     ## Yes 
-    ##  16
+    ##  37
 
     summary(df$`Do you have any dietary restrictions?`)
 
-    ##            No restrictions No restrictions, pork free 
-    ##                         12                          1 
-    ##                      Vegan                 Vegetarian 
-    ##                          2                          1
+    ##                     No restrictions No restrictions, lactose intolerant 
+    ##                                  29                                   1 
+    ##   No restrictions, no pork products          No restrictions, pork free 
+    ##                                   1                                   1 
+    ##                               Vegan                          Vegetarian 
+    ##                                   2                                   3
 
     summary(df$`Do you agree to video recording?`)
 
     ## No, I'd rather not have the video released, thanks 
-    ##                                                  1 
+    ##                                                  4 
     ##                  Yes, I agree to the video release 
-    ##                                                 15
+    ##                                                 33
 
     summary(df$`Do you need assistance with childcare (reimbursements, accomdations)?`)
 
-    ##  no yes 
-    ##  14   2
+    ## maybe/unsure           no          yes 
+    ##            1           33            3
 
     summary(df$`Will you be participating in the workshop, hackathon, or both?`)
 
     ##                                                              - 
-    ##                                                              1 
+    ##                                                              2 
     ##                                       A combination of the two 
-    ##                                                              6 
+    ##                                                             18 
+    ##                      Hackathon only (hacking all day each day) 
+    ##                                                              2 
     ## Workshop only (lightning talks in AM, breakout sessions in PM) 
-    ##                                                              9
+    ##                                                             15
 
     summary(df$`Have you registered for \"CollaborationFest\", too?`)
 
     ##      -     No Unsure    Yes 
-    ##      1      5      5      5
+    ##      1     10      7     19

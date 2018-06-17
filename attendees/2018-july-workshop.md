@@ -2,14 +2,7 @@
       group_by(Team) %>%
       summarize (n = n())
     summary <- as.data.frame(summary)
-    summary
-
-    ##     Team n
-    ## 1 Carbon 1
-    ## 2 Copper 3
-    ## 3 Helium 5
-    ## 4    NIH 1
-    ## 5 Sodium 1
+    #summary
 
 Summary statistics for may meeting thus far
 
@@ -19,14 +12,14 @@ Summary statistics for may meeting thus far
     summary(df$`Do you agree to abide by the event Code of Conduct?`) 
 
     ## Yes 
-    ##  11
+    ##  15
 
     summary(df$`Do you have any dietary restrictions?`)
 
     ##                                                                                       Keto 
     ##                                                                                          1 
     ##                                                                            No restrictions 
-    ##                                                                                          8 
+    ##                                                                                         12 
     ## No restrictions, Dietary restrictions -- need other categories -- no pork or bacon for me! 
     ##                                                                                          1 
     ##                                                                                      Vegan 
@@ -35,14 +28,14 @@ Summary statistics for may meeting thus far
     summary(df$`Do you agree to video recording?`)
 
     ## Yes, I agree to the video release 
-    ##                                11
+    ##                                15
 
     summary(df$`Do you need assistance with childcare (reimbursements, accomdations)?`)
 
     ## maybe/unsure           no          yes 
-    ##            1            9            1
+    ##            1           13            1
 
     summary(df$`Are you interested in attending a group dinner on Wed. July 25?`)
 
     ##   No  Yes NA's 
-    ##    1    9    1
+    ##    1   13    1

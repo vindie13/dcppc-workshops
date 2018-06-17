@@ -13,7 +13,7 @@ library(tidyverse)
 
 ```{r raw, message=FALSE, include=T, echo = F}
 ## Load raw data
-df <- read_csv("~/Downloads/tito-dcppc-2018-july-workshop-tickets-for-rayna-harris-gmail-com-1095276.csv")
+df <- read_csv("~/Downloads/tito-dcppc-2018-july-workshop-tickets-for-rayna-harris-gmail-com-1096047.csv")
 df <- df[-c(3:5),] # drop incomplete registrants
 df <- df[c(5:8,28:34)] # manually selected for importance
 ```
@@ -61,7 +61,7 @@ summary <- attendees %>%
   group_by(Team) %>%
   summarize (n = n())
 summary <- as.data.frame(summary)
-summary
+#summary
 ```
 
 Summary statistics for may meeting thus far
