@@ -6,9 +6,7 @@ Thanks so much for registering for the June Data Commons Pilot Phase Consortium 
 
 We are really excited about having this workshop be co-located with the [Bioinformatics Open Source Conference (BOSC)](https://galaxyproject.org/events/gccbosc2018/collaboration/). You have probably received some emails from the BOSC organizers. You are more than welcome to participate in non-DCPPC events going on at BOSC in the same manner that BOSC attendees will be encouraged to attend our DCPPC events for cross-pollination. 
 
-The DCPPC is organizing both a workshop and a full-stacks hackathon! All DCPPC participants will come together for the welcome and closing talks but will fork into two tracks for the bulk of each day. 
-
-Please visit these useful links below for more details. 
+The DCPPC is organizing both a workshop and a full-stacks hackathon! Please visit these useful links below for more details. 
 
 - The **workshop & hackathon agenda**: https://bit.ly/JuneAgendaDCPPC
 - The **list of attendees**: https://bit.ly/JuneAttendeesDCPPC
