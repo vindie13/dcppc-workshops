@@ -19,8 +19,8 @@ Below are some answers to frequently asked questions?
 **What's the format?** As with previous workshops, the format for the two-day workshops will include short talks in the mornings and breakout groups in the afternoons. There has been overwhelmingly positive support for the effectiveness of this format, so we are sticking with this through September. We are incorporating as many suggestions as possible to make the meetings more effective.
 
 * ***Morning talks**: Each team and Data Steward should plan to have 1 representative talk about past accomplishments on Day 1 and future plans on Day 2. Some suggestions for improving the utility of talks:
-- articulate both the big picture and the details of your efforts
-- articulate how your work interacts with other components and KC to achieve the goals of the Commons
+   * articulate both the big picture and the details of your efforts
+   * articulate how your work interacts with other components and KC to achieve the goals of the Commons
 
 * ***Breakout sessions**: By popular demand, breakout group planning has already commenced. Please visit the GitHub repositories above and click the `Issues` tab to view and comment on the proposed sessions. Please add more! Before the meeting, we will assign breakout groups to Day 1 or Day2 and give each group a room assignment. Each group should designate a scribe and share their notes with the consortium. 
 
