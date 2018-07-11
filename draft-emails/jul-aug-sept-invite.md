@@ -18,11 +18,11 @@ Below are some answers to frequently asked questions?
 
 **What's the format?** As with previous workshops, the format for the two-day workshops will include short talks in the mornings and breakout groups in the afternoons. There has been overwhelmingly positive support for the effectiveness of this format, so we are sticking with this through September. We are incorporating as many suggestions as possible to make the meetings more effective.
 
-* ***Morning talks**: Each team and Data Steward should plan to have 1 representative talk about past accomplishments on Day 1 and future plans on Day 2. Some suggestions for improving the utility of talks:
+* **Morning talks**: Each team and Data Steward should plan to have 1 representative talk about past accomplishments on Day 1 and future plans on Day 2. Some suggestions for improving the utility of talks:
    * articulate both the big picture and the details of your efforts
    * articulate how your work interacts with other components and KC to achieve the goals of the Commons
 
-* ***Breakout sessions**: By popular demand, breakout group planning has already commenced. Please visit the GitHub repositories above and click the `Issues` tab to view and comment on the proposed sessions. Please add more! Before the meeting, we will assign breakout groups to Day 1 or Day2 and give each group a room assignment. Each group should designate a scribe and share their notes with the consortium. 
+* **Breakout sessions**: By popular demand, breakout group planning has already commenced. Please visit the GitHub repositories above and click the `Issues` tab to view and comment on the proposed sessions. Please add more! Before the meeting, we will assign breakout groups to Day 1 or Day2 and give each group a room assignment. Each group should designate a scribe and share their notes with the consortium. 
 
 **Can I join remotely**: All are welcome to listen to the talks remotely via Zoom. The link to connect is on the agenda on each workshop website. Some breakout groups also lend themselves to remote participation; look for the "Join via Zoom!" lab on GitHub issues. We will aim to have microphones for Q&A sessions to make these sessions more accessible to remote participants.
 
