@@ -23,7 +23,7 @@ Below are some answers to frequently asked questions.
 
 *  **Breakout sessions**: By popular demand, breakout group planning has already commenced. Please visit the GitHub repositories above and click the `Issues` tab to view and comment on the proposed sessions. Please add more! Before the meeting, we will assign breakout groups to Day 1 or Day 2 and give each group a room assignment. Each group should designate a scribe and share their notes with the consortium. 
 
-**Can I join remotely?**: All are welcome to listen to the talks remotely via Zoom. The link to connect is on the agenda on each workshop website. Some breakout groups also lend themselves to remote participation; look for the "Join via Zoom!" lab on GitHub issues. We will aim to have microphones for Q&A sessions to make these sessions more accessible to remote participants.
+**Can I join remotely?** All are welcome to listen to the talks remotely via Zoom. The link to connect is on the agenda on each workshop website. Some breakout groups also lend themselves to remote participation; look for the "Join via Zoom!" lab on GitHub issues. We will aim to have microphones for Q&A sessions to make these sessions more accessible to remote participants.
 
 **Is there an executive summary of past workshops?** Community feedback is extremely valuable, so we've been conducting post-workshop surveys. Please take a look at the [complete and summary reports from the May and June workshop](https://github.com/dcppc/internal/tree/master/Assessment). 
 
