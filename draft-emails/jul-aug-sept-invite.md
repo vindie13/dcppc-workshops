@@ -25,7 +25,7 @@ Below are some answers to frequently asked questions.
 
 **Can I join remotely?**: All are welcome to listen to the talks remotely via Zoom. The link to connect is on the agenda on each workshop website. Some breakout groups also lend themselves to remote participation; look for the "Join via Zoom!" lab on GitHub issues. We will aim to have microphones for Q&A sessions to make these sessions more accessible to remote participants.
 
-**Is their an executive summary of past workshops?** Community feedback is extremely valuable, so we've been conducting post-workshop surveys. Please take a look at the [complete and summary reports from the May and June workshop](https://github.com/dcppc/internal/tree/master/Assessment). 
+**Is there an executive summary of past workshops?** Community feedback is extremely valuable, so we've been conducting post-workshop surveys. Please take a look at the [complete and summary reports from the May and June workshop](https://github.com/dcppc/internal/tree/master/Assessment). 
 
 **Have questions or concerns?** Send an email to <dcppc.inbox@gmail.com> or post a question on the Slack [#2018-monthly-workshop](https://nih-dcppc.slack.com/messages/CAMLGP27N/convo/GANQFSGAD-1528381202.000599/) channel.
 
