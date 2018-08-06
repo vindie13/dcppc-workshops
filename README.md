@@ -19,7 +19,7 @@ The issues and projects and documents within this repository are used to organiz
 
 ### July Workshop: July 25-26, 2018 in Chapel Hill, NC 
 * Resources: [workshop website](http://nih-data-commons.us/2018-july-workshop/), [GitHub repository](https://github.com/dcppc/2018-july-workshop), [Google Drive](https://drive.google.com/drive/u/0/folders/1Ues8Pa_xV6Vvbg0-4uBuK_5EBefDkEEK) 
-* Videos: [Day 1 and 2 lightning talk playlist](https://archive.org/details/2018-july-workshop-lightningtalks) and [breakout group playlist](https://archive.org/details/2018-august-workshopbreakoutgroups). 
+* Videos: [Day 1 and 2 lightning talk playlist](https://archive.org/details/2018-july-workshop-lightningtalks), [breakout group playlist](https://archive.org/details/2018-august-workshopbreakoutgroups), and [interviews with Dr Rebecca Calisi](https://vimeo.com/album/5235887) 
 
 ### June Workshop: June 29-30, 2018 in Portland, OR
 * Resources:  [website](http://nih-data-commons.us/2018-june-workshop/), [GitHub repository](https://github.com/dcppc/2018-june-workshop), [Google Drive](https://drive.google.com/drive/u/0/folders/19oA9Us4-2ev3UeKDYN1d2D9UjNNS7llk)
@@ -28,7 +28,7 @@ The issues and projects and documents within this repository are used to organiz
 
 ### May Workshop: May 30-31, 2018 in Boston, MA
 * Resources: [website](http://nih-data-commons.us/2018-may-workshop/), [GitHub repository](https://github.com/dcppc/2018-may-workshop), [Google Drive](https://drive.google.com/drive/u/0/folders/1t9mLxGfNEOny220snt5I2xDVxuIM-AUY)
-* Lightning talk recordings: [Day 1](https://archive.org/details/commonspilot-may2018workshop-day01) and [Day 2](https://archive.org/details/commonspilot-may2018workshop-day02)
+* Videos: [Day 1 talks](https://archive.org/details/commonspilot-may2018workshop-day01), [Day 2 talks](https://archive.org/details/commonspilot-may2018workshop-day02), and [interviews with Dr Rebecca Calisi](https://vimeo.com/album/5235887) 
 * Post-workshop assessment: [Full report](https://pilot.nihdatacommons.us/internal/Assessment/2018-May-Report-Full/), [Summary report](https://pilot.nihdatacommons.us/internal/Assessment/2018-May-Report-Summary/)
 
 ### April F2F Meeting: April 27, 2018 in Bethesda, MD
