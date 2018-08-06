@@ -3,10 +3,10 @@ Dear August workshop attendees, project managers, and contacts
 The August workshop is 21 days away! Here are a few announcements and details regarding the workshop.
 
 ### Important dates
-- The workshop is Monday, Aug 27 - Tuesday, Aug 28
-- The C4 meeting is Wednesday, Aug 29 (by invitation)
-- The registration deadline is Tuesday, August 21 
-- The recommended guideline for submitting breakout groups or sign up to give a talk on Friday, August 24
+- Monday, Aug 27 - Tuesday, Aug 28: The August workshop!
+- Wednesday, Aug 29: C4 meeting (by invitation)
+- Tuesday, August 21: Registration deadline
+- Friday, August 24: Recommended date for submitting breakout groups and signing up to give your Team's lightning talk
 
 ### Workshop details and logistics
 
