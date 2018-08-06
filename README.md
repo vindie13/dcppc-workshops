@@ -15,14 +15,16 @@ The issues and projects and documents within this repository are used to organiz
 * Resources: [workshop website](http://nih-data-commons.us/2018-september-workshop/), [GitHub repository](https://github.com/dcppc/2018-september-workshop)
 
 ### August Workshop: August 27-28, 2018 in Chicago, IL
-* Resources: [workshop website](http://nih-data-commons.us/2018-august-workshop/), [GitHub repository](https://github.com/dcppc/2018-august-workshop)  
+* Resources: [workshop website](http://nih-data-commons.us/2018-august-workshop/), [GitHub repository](https://github.com/dcppc/2018-august-workshop), [Google Drive](https://drive.google.com/drive/u/0/folders/16oNTuVSPMa4sjCRUG1q60DpoFi43GRn2) 
 
 ### July Workshop: July 25-26, 2018 in Chapel Hill, NC 
-* Resources: [workshop website](http://nih-data-commons.us/2018-july-workshop/), [GitHub repository](https://github.com/dcppc/2018-july-workshop) 
+* Resources: [workshop website](http://nih-data-commons.us/2018-july-workshop/), [GitHub repository](https://github.com/dcppc/2018-july-workshop), [Google Drive](https://drive.google.com/drive/u/0/folders/1Ues8Pa_xV6Vvbg0-4uBuK_5EBefDkEEK) 
+* Videos: [Day 1 and 2 lightning talk playlist](https://archive.org/details/2018-july-workshop-lightningtalks) and [breakout group playlist](https://archive.org/details/2018-august-workshopbreakoutgroups). 
 
 ### June Workshop: June 29-30, 2018 in Portland, OR
 * Resources:  [website](http://nih-data-commons.us/2018-june-workshop/), [GitHub repository](https://github.com/dcppc/2018-june-workshop), [Google Drive](https://drive.google.com/drive/u/0/folders/19oA9Us4-2ev3UeKDYN1d2D9UjNNS7llk)
 * Lightning talk recordings: [Day 1](https://archive.org/details/13TeamXenonCharlieWhicherJune2018), [Day 2](https://archive.org/details/June2018DCPPCworkshoptalksday1)
+* Post-workshop assessment: [Full report](https://pilot.nihdatacommons.us/internal/Assessment/2018-June-Report-Full/), [Summary report](https://pilot.nihdatacommons.us/internal/Assessment/2018-June-Report-Summary/)
 
 ### May Workshop: May 30-31, 2018 in Boston, MA
 * Resources: [website](http://nih-data-commons.us/2018-may-workshop/), [GitHub repository](https://github.com/dcppc/2018-may-workshop), [Google Drive](https://drive.google.com/drive/u/0/folders/1t9mLxGfNEOny220snt5I2xDVxuIM-AUY)
