@@ -16,14 +16,15 @@ library(tidyverse) # for filter, inner_join, and anti_join functions
 
 ```{r raw, message=FALSE, include=T, echo = F}
 ## Load raw data
-df <- read_csv("~/Downloads/tito-dcppc-june-data-commons-workshop-tickets-for-rayna-harris-gmail-com-1096288.csv")
+df <- read_csv("~/Downloads/tito-dcppc-june-data-commons-workshop-tickets-for-rayna-harris-gmail-com-1098515.csv")
 df <- df[c(5:8,28:35)] # manually selected for importance
 ```
 
 
 ```{r teamnames, echo = F}
 df$`Which Team are you a member of?` <- ifelse(grepl("Data Stewards", df$`Which Team are you a member of?`), "Data Stewards",
-                  ifelse(grepl("NIH", df$`Which Team are you a member of?`), "Hydrogen (NIH)",
+                  ifelse(grepl("NIH", df$`Which Team are you a member of?`), "Hydrogen",
+                  ifelse(grepl("EPC", df$`Which Team are you a member of?`), "EPC",
                   ifelse(grepl("Carbon", df$`Which Team are you a member of?`), "Carbon",
                   ifelse(grepl("Copper", df$`Which Team are you a member of?`), "Copper",
                   ifelse(grepl("Nitrogen", df$`Which Team are you a member of?`), "Nitrogen",
@@ -34,7 +35,7 @@ df$`Which Team are you a member of?` <- ifelse(grepl("Data Stewards", df$`Which 
                   ifelse(grepl("Calcium", df$`Which Team are you a member of?`), "Calcium",
                   ifelse(grepl("Helium", df$`Which Team are you a member of?`), "Helium",
                   ifelse(grepl("Oxygen", df$`Which Team are you a member of?`), "Oxygen",
-                  ifelse(grepl("Phosphorus", df$`Which Team are you a member of?`), "Phosphorus", "Other")))))))))))))
+                  ifelse(grepl("Phosphorus", df$`Which Team are you a member of?`), "Phosphorus", "Other"))))))))))))))
 df$`Which Team are you a member of?` <- as.factor(as.character(df$`Which Team are you a member of?`))
 names(df)[5]<-"Team"
 
@@ -50,9 +51,9 @@ attendees <- as.data.frame(attendees)
 attendees$`Ticket Full Name` <- as.character(attendees$`Ticket Full Name`)
 
 attendees <- attendees %>%  
-  arrange(`Ticket Full Name`)
+  arrange(`Team`, `Ticket Full Name`)
 
-#attendees
+attendees
 
 write.csv(attendees, "./data/2018-june-attendees.csv")
 ```
@@ -63,7 +64,7 @@ summary <- attendees %>%
   group_by(Team) %>%
   summarize (n = n())
 summary <- as.data.frame(summary)
-#summary
+summary
 ```
 
 
@@ -108,42 +109,13 @@ childcare <- as.data.frame(childcare)
 #childcare
 ```
 
-```{r hackathon, echo = F, message = F, include=F}
-# hackathon or no hackathon
-
-names(df)[11]<-"Hackathon"
-
-df$Hackathon <- ifelse(grepl("combination", df$Hackathon), "combination",
-                  ifelse(grepl("Hackathon", df$Hackathon), "hackathon only",
-                  ifelse(grepl("Workshop", df$Hackathon), "workshop only", NA)))
-
-attendees <- df %>% 
-  select(`Ticket Full Name`, `Team`, `Hackathon`, `Ticket Email`, `Have you registered for \"CollaborationFest\", too?`) 
-attendees <- as.data.frame(attendees)
-
-attendees$`Ticket Full Name` <- as.character(attendees$`Ticket Full Name`)
-attendees <- attendees %>%  
-  arrange(`Ticket Full Name`)
-names(attendees)[4]<-"Email"
-write.csv(attendees, "./data/2018-june-attendees.csv")
-
-# using google sheets to read in collaboration fest data
-gs_ls()
-cofest <- gs_title("CoFest 2018 Participants")
-participants <- gs_read(ss=cofest, ws = "Sheet1", skip = 2, check.names = F)
-participants <- participants[c(2:4,18)] # manually selected for importance
-
-fj <- full_join(attendees, participants, by = "Email")
 
 
-onboarding <- gs_title("DCPPC all people Consortium responses to form")
-onboarded <- gs_read(ss=onboarding, ws = "Form responses 1", check.names = F)
-onboarded <- onboarded[c(2,4,3)] # manually selected for importance
-names(onboarded)[2]<-"Email"
-
-lg <- left_join(fj, onboarded, by = "Email")
-
-write.csv(lg, "./data/2018-june-attendees-cofest.csv")
+```{r no vide, echo = F}
+names(df)[7]<-"Childcare"
+childcare <- df %>% 
+  select(`Ticket Full Name`, `Childcare`) %>%  
+  filter(Childcare == "yes")
+childcare <- as.data.frame(childcare)
+childcare
 ```
-
-

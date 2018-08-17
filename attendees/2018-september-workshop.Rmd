@@ -1,11 +1,9 @@
 ---
-title: "July workshop regstration analysis"
+title: "September workshop regstration analysis"
 author: "Rayna M Harris"
-date: "07/22/2018"
+date: "7/13/2018"
 output: md_document
 ---
-
-_The following information was last updated on July 26, 2018._
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -15,18 +13,16 @@ library(knitr)
 
 
 ```{r raw, message=FALSE, include=T, echo = F}
-## First, download raw csv file from Tito attendees page
-
-df <- read_csv("~/Downloads/tito-dcppc-2018-july-workshop-tickets-for-rayna-harris-gmail-com-1100688.csv")
-df <- df[c(5:8,28:34)] # manually selected for importance
+## Load raw data
+df <- read_csv("~/Downloads/tito-dcppc-september-dcppc-workshop-tickets-for-rayna-harris-gmail-com-1103404.csv")
+df <- df[c(5:8,28:33)] # manually selected for importance
 ```
 
+_The following information was last updated on August 15, 2018._
 
 ```{r teamnames, echo = F}
 df$`Which Team are you a member of?` <- ifelse(grepl("Data Stewards", df$`Which Team are you a member of?`), "Data Stewards",
-                  ifelse(grepl("DataSTAGE", df$`Which Team are you a member of?`), "DataSTAGE",
                   ifelse(grepl("NIH", df$`Which Team are you a member of?`), "Hydrogen",
-                  ifelse(grepl("Hydrogen", df$`Which Team are you a member of?`), "Hydrogen",
                   ifelse(grepl("EPC", df$`Which Team are you a member of?`), "EPC",
                   ifelse(grepl("Carbon", df$`Which Team are you a member of?`), "Carbon",
                   ifelse(grepl("Copper", df$`Which Team are you a member of?`), "Copper",
@@ -38,7 +34,7 @@ df$`Which Team are you a member of?` <- ifelse(grepl("Data Stewards", df$`Which 
                   ifelse(grepl("Calcium", df$`Which Team are you a member of?`), "Calcium",
                   ifelse(grepl("Helium", df$`Which Team are you a member of?`), "Helium",
                   ifelse(grepl("Oxygen", df$`Which Team are you a member of?`), "Oxygen",
-                  ifelse(grepl("Phosphorus", df$`Which Team are you a member of?`), "Phosphorus", "Other"))))))))))))))))
+                  ifelse(grepl("Phosphorus", df$`Which Team are you a member of?`), "Phosphorus", "Other"))))))))))))))
 df$`Which Team are you a member of?` <- as.factor(as.character(df$`Which Team are you a member of?`))
 names(df)[5]<-"Team"
 
@@ -58,22 +54,9 @@ attendees <- attendees %>%
   arrange(`Team`, `Ticket Full Name`)
 
 attendees <- as.data.frame(attendees)
-
-## remove noshows
-
-attendees <- attendees %>% 
-  dplyr::filter(!grepl('Gregurick|Grossman|Levinson|Lyons|Schuerer|Aguet|Ian', `Ticket Full Name`))
-
-## uncomment attendees to view list
 attendees
-attendees <- as.data.frame(attendees)
-write.csv(attendees, "./data/2018-july-attendees.csv")
 
-```
-
-### Who declined to comment
-```{r}
-df %>%  dplyr::filter(grepl('No', `Do you agree to video recording?`))
+write.csv(attendees, "./data/2018-september-attendees.csv")
 ```
 
 
@@ -85,23 +68,27 @@ summary <- attendees %>%
   group_by(Team) %>%
   summarize (n = n())
 summary <- as.data.frame(summary)
-
-## uncomment summary to view list 
 summary
 ```
-
-
 
 ###  Summary statistics for may meeting thus far
 ```{r summarize}
 ##  Make factors
-cols <- c(6:11) # character columns to turn to factors
+cols <- c(6:10) # character columns to turn to factors
 df[cols] <- lapply(df[cols], factor) # set as factor
 summary(df$`Do you agree to abide by the event Code of Conduct?`) 
 summary(df$`Do you have any dietary restrictions?`)
 summary(df$`Do you agree to video recording?`)
 summary(df$`Do you need assistance with childcare (reimbursements, accomdations)?`)
-summary(df$`Are you interested in attending a group dinner on Wed. July 25?`)
+```
+
+```{r childcare, echo = F}
+names(df)[7]<-"Childcare"
+childcare <- df %>% 
+  select(`Ticket Full Name`, `Childcare`) %>%  
+  filter(Childcare == "yes")
+childcare <- as.data.frame(childcare)
+childcare
 ```
 
 
