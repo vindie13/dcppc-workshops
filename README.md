@@ -20,6 +20,7 @@ The issues and projects and documents within this repository are used to organiz
 ### July Workshop: July 25-26, 2018 in Chapel Hill, NC 
 * Resources: [workshop website](http://nih-data-commons.us/2018-july-workshop/), [GitHub repository](https://github.com/dcppc/2018-july-workshop), [Google Drive](https://drive.google.com/drive/u/0/folders/1Ues8Pa_xV6Vvbg0-4uBuK_5EBefDkEEK) 
 * Videos: [Day 1 and 2 lightning talk playlist](https://archive.org/details/2018-july-workshop-lightningtalks), [breakout group playlist](https://archive.org/details/2018-august-workshopbreakoutgroups), and [interviews with Dr Rebecca Calisi](https://vimeo.com/album/5235887) 
+* Post-workshop assessment: [Full report](https://pilot.nihdatacommons.us/internal/Assessment/2018-July-Report-Full/), [Summary report](https://pilot.nihdatacommons.us/internal/Assessment/2018-July-Report-Summary/), and a 3-month [quantitative report](./2018-Three-Month-Quantitative.pdf) 
 
 ### June Workshop: June 29-30, 2018 in Portland, OR
 * Resources:  [website](http://nih-data-commons.us/2018-june-workshop/), [GitHub repository](https://github.com/dcppc/2018-june-workshop), [Google Drive](https://drive.google.com/drive/u/0/folders/19oA9Us4-2ev3UeKDYN1d2D9UjNNS7llk)
