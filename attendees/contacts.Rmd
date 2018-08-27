@@ -1,0 +1,123 @@
+---
+title: "R Notebook"
+output: md_document
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+library(googlesheets) # for reading data from google sheets
+library(tidyverse)      # for plotting
+library(reshape2)
+knitr::opts_chunk$set(fig.path = './images') #output dir
+```
+
+
+```{r}
+# for instructions on reading data from google sheets see 
+# http://www.opiniomics.org/reading-data-from-google-sheets-into-r/
+
+gs_ls() # authenticate in and list sheets that you hvae access to
+
+# 1. get sheet 2. get tab. 3. make data frame
+DC <- gs_title("Data Commons Contacts, DAR Whitelisting, and Onboarding")
+temp <- gs_read(ss=DC, ws = "Onboarding", skip =2, check.names = T)
+contacts <- as.data.frame(temp)
+
+#contacts <- read.csv("~/Downloads/Data Commons Contacts, DAR Whitelisting, and Onboarding - Onboarding.csv")
+
+contacts$date <- sapply(strsplit(as.character(contacts$Timestamp),' '), "[", 1)
+contacts$time <- sapply(strsplit(as.character(contacts$Timestamp),' '), "[", 2)
+
+contacts$date <- strptime(contacts$date, "%m/%d/%Y", tz = "")
+contacts$time <- strptime(contacts$time, "%h:%M:%S", tz = "")
+
+contacts$date <- as.Date(contacts$date)
+```
+
+```{r onboarding-over-time}
+base <- ggplot(contacts,aes(x=date)) +
+  stat_bin(aes(y=cumsum(..count..)),geom="step", bins = 100) + 
+  theme_bw() + 
+  ggtitle("DCPPC onboarding over time") +
+  xlab("Date") + ylab("Total onboarded")
+
+base + scale_x_date(date_breaks = "1 month", date_labels = "%b %y") 
+
+```
+
+
+```{r}
+# Prep contacts to join with workshop attendee lists
+
+onboarded <- contacts
+
+onboarded <-  onboarded %>% replace_na(list( Last.name = "")) 
+onboarded$Ticket.Full.Name <- paste(onboarded$First.name,onboarded$Last.name, sep = " ")
+
+
+onboarded$onboarded <- "yes"
+onboarded <- onboarded[c(59,60,1)]
+
+write.csv(onboarded, "./data/onboarded.csv", row.names = F)
+```
+
+
+
+```{r}
+workshopsattendees <- c("data/2018-may-attendees.csv" , 
+                        "data/2018-june-attendees.csv" , 
+                        "data/2018-july-attendees.csv" ,
+                        "data/2018-august-attendees.csv" ,
+                        "data/2018-september-attendees.csv")
+
+allworkshops <- data.frame() 
+
+for(i in workshopsattendees){
+  #print(i)
+  allworkshops <- allworkshops
+  temp <- read.csv(i)
+  #print(names(temp))
+  temp$workshop <- i
+  allworkshops <- rbind(allworkshops, temp)
+}
+
+allworkshops$workshop <- ifelse(grepl("august", allworkshops$workshop), "august",
+                  ifelse(grepl("july", allworkshops$workshop), "july",
+                  ifelse(grepl("june", allworkshops$workshop), "june",
+                  ifelse(grepl("september", allworkshops$workshop), "september", "may"))))
+
+allworkshops$X <- NULL
+
+# fix names
+allworkshops$Ticket.Full.Name[allworkshops$Ticket.Full.Name=="Avi Maayan"] <- "Avi Ma'ayan"
+
+allworkshopswide = dcast(allworkshops, Team + Ticket.Full.Name ~ workshop)
+
+allworkshopswide$WorkshopsAttended = (allworkshopswide$august + allworkshopswide$july  + allworkshopswide$june + allworkshopswide$september + allworkshopswide$may)
+allworkshopswide <- allworkshopswide %>%  
+  arrange(desc(WorkshopsAttended), Team, Ticket.Full.Name)
+
+allworkshopswide$may <- NULL
+#allworkshopswide$august <- NULL
+allworkshopswide$july <- NULL
+allworkshopswide$june <- NULL
+allworkshopswide$september <- NULL
+
+```
+
+```{r}
+LFWO <- left_join(allworkshopswide, onboarded)
+LFWO$onboarded <- ifelse(grepl("yes", LFWO$onboarded), "yes", "no")
+LFWO$onboarded <- as.factor(LFWO$onboarded)
+LFWO$Timestamp <- NULL
+write.csv(LFWO, "./data/WorkshopsOnboarded.csv", row.names = F)
+```
+
+```{r}
+LFWO <- LFWO %>%
+  filter(august == 1)
+write.csv(LFWO, "./data/AugustAttendeesOnboarded.csv", row.names = F)
+```
