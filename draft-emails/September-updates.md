@@ -1,3 +1,25 @@
+## Sept 6 email 
+
+Dear Colleagues,
+
+Thank you for your patience while we looked for more rooms in Boston to accommodate the increasing demand for attendance at the September workshop. 
+
+I estimate about ~70 people and have reopened registration accordingly. If you were on the waitlist, please check your email and update your registration to provide your team name, dietary preferences, etc.
+
+The lightning talks will be in Kresge G3 on Sept. 20 and Countway Lahey Room 5th room on the 21st. These rooms accommodate 70 and 60 people, respectively, so we also have overflow rooms available in Countway should we need them.
+
+For breakout sessions, we have reserved 6 and 4 smaller rooms on the 20th and 20st, respectively. Please propose your breakout group topics by submitting a new issue at http://bit.ly/SeptBreakout
+
+By-invitation-only events: The Stage Steering Committee Meeting will be in Countway 320 on Sept 20. The Commonsing meeting will be in Countway 403 and 320 on the 21st. The C4 meeting on the 19th is TBD. For questions about these events, please contact Sarah Davis, Titus Brown, or Jen Ytrri, respectively. 
+
+Please let me know if you have questions or concerns. See you in Boston!
+
+Best,
+Rayna (Team Copper)
+
+
+## August 31 email
+
 Hello colleagues,
 
 You are registered to attend the next DCPPC workshop in Boston on September 20-21. 
