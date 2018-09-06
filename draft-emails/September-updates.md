@@ -4,11 +4,11 @@ Dear Colleagues,
 
 Thank you for your patience while we looked for more rooms in Boston to accommodate the increasing demand for attendance at the September workshop. 
 
-I estimate about ~70 people and have reopened registration accordingly. If you were on the waitlist, please check your email and update your registration to provide your team name, dietary preferences, etc.
+I estimate about ~70 people will attend and have reopened registration accordingly. If you were on the waitlist, please check your email and update your registration to provide your team name, dietary preferences, etc.
 
-The lightning talks will be in Kresge G3 on Sept. 20 and Countway Lahey Room 5th room on the 21st. These rooms accommodate 70 and 60 people, respectively, so we also have overflow rooms available in Countway should we need them.
+The lightning talks will be in Kresge G3 on Sep. 20 and Countway Lahey Room 5 on the 21st. These rooms accommodate 70 and 60 people, respectively, so we also have overflow rooms available in Countway should we need them.
 
-For breakout sessions, we have reserved 6 and 4 smaller rooms on the 20th and 20st, respectively. Please propose your breakout group topics by submitting a new issue at http://bit.ly/SeptBreakout
+For breakout sessions, we have reserved 6 small rooms for the 20th and 4 on the 21st. Please propose your breakout group topics by submitting a new issue at http://bit.ly/SeptBreakout
 
 By-invitation-only events: The Stage Steering Committee Meeting will be in Countway 320 on Sept 20. The Commonsing meeting will be in Countway 403 and 320 on the 21st. The C4 meeting on the 19th is TBD. For questions about these events, please contact Sarah Davis, Titus Brown, or Jen Ytrri, respectively. 
 
@@ -20,14 +20,14 @@ Rayna (Team Copper)
 
 ## August 31 email
 
-Hello colleagues,
+Hello Colleagues,
 
 You are registered to attend the next DCPPC workshop in Boston on September 20-21. 
 Here are some important updates **that require a response**. 
 
 Before I begin, I plan on circulating a document with highlights, 
-key decisions and links to all documents related to the August and September workshops, 
-so even if you cannot or chose not to attend, we are doing our best to improve the 
+key decisions and links to all documents related to the August and September workshops. 
+So even if you cannot or chose not to attend, we are doing our best to improve the 
 dissemination of information and reduce the fear of missing out :)
 
 1. **Registration is temporarily closed.** 
