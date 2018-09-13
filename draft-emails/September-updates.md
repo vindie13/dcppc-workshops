@@ -1,4 +1,4 @@
-Hello colleagues,
+Hello Colleagues,
 
 You are registered to attend the next DCPPC workshop in Boston on September 20-21. 
 Here are some important updates **that require a response**. 
