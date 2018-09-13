@@ -17,7 +17,7 @@ so I'm capping your team's registration.
 Please discuss within your team why each person needs to attend as see if it is possible to cut back.  
 Teams Carbon, Nitrogen, Oxygen, Phosphorus, & Sodium only have 1 attendee, 
 but I imagine would like to send more. 
-**Action item:** please contact Rayna Harris (via slack or email) with the names of attendees you would like to remove or add by Tues. Sept 4th.  
+**Action item:** please contact Rayna Harris (via slack or email) with the names of attendees you would like to remove or add by Tues. Sept 4.  
 
    
 1. **Reimbursements.** As always, we will reimburse your travel expenses, 
